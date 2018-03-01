@@ -2535,7 +2535,7 @@ bool LoadBlockIndex(bool fAllowNew)
         const char* pszTimestamp = fTestNet ? "A new epoch for global fundraising" : "08795136517445238056987515653326978746565045253647784699110785997841012011001784";
         CTransaction txNew;
         txNew.nVersion = 1;
-        txNew.nTime = 1494587326;
+        txNew.nTime = 1520081464;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -2548,7 +2548,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nVersion = 1;
         block.nTime    = 1520081464;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 1520081464;
+        block.nNonce   = 0;
 
         if (false  && (block.GetHash() != hashGenesisBlock)) {
 
